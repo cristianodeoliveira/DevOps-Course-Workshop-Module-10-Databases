@@ -64,7 +64,7 @@ The value of an order can be calculated by multiplying the `Amount` of product o
 
 3.  What was the value of the most expensive order placed in 2019?
     <details><summary>Answer</summary>903860.40</details>
-    <details><summary>Hint</summary>Try using the `DATEPART` function.</details>
+    <details><summary>Hint</summary>Try using the `DATE_PART` function.</details>
 
 4.  What was the value of all orders placed in 2019?
     <details><summary>Answer</summary>91770383.17</details>
@@ -111,7 +111,12 @@ The value of an order can be calculated by multiplying the `Amount` of product o
     | noviembre  | 8244004.19  |
     | diciembre  | 6152906.05  |
     </details>
-    <details><summary>Hint</summary>The `FORMAT` function can take a 'culture' parameter.</details>
+    <details>
+    <summary>Hint</summary>
+    Postgres takes the language formatting from the system default. You can change that per-session by setting <a href="https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-FORMAT"> lc_time </a> to 'es_ES'.
+    
+    You can also use <a href ="https://www.postgresql.org/docs/current/functions-formatting.html">to_char()</a> to extract the month. Make sure you add the right prefix for the locale translation to work - see "Table 9.30. Template Pattern Modifiers for Numeric Formatting" on the same page for more details.
+    </details>
 
 8.  (Optional) The report now needs to include every year - grouped and ordered by year _and_ month.
     <details><summary>Answer</summary>
