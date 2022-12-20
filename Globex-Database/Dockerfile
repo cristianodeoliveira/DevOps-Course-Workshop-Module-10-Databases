@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/mssql/server
+FROM postgres:15.1
 
 COPY wait-for-it/wait-for-it.sh ./wait-for-it.sh
 

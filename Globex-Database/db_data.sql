@@ -1,9 +1,4 @@
-USE [globex]
-GO
-
-INSERT INTO [dbo].[PayBand]
-    ([MonthlySalary]
-    ,[AnnualBonus])
+INSERT INTO "payband" ("monthlysalary", "annualbonus")
 VALUES
     (2010.74, 500.00),
     (2950.00, 1000.00),
@@ -11,68 +6,19 @@ VALUES
     (5000.00, 4750.00),
     (6525.00, 9950.00),
     (8333.66, 12500.00),
-    (10536.08, 19100.00)
-GO
+    (10536.08, 19100.00);
 
-BULK INSERT [Supplier]
-FROM '/data/Supplier.csv'
-WITH (
-    FIRSTROW=2,
-    FORMAT = 'CSV',
-    ROWTERMINATOR='0x0a'
-)
-GO
+COPY "supplier" FROM '/data/Supplier.csv' WITH (FORMAT CSV, HEADER);
 
-BULK INSERT [Product]
-FROM '/data/Product.csv'
-WITH (
-    FIRSTROW=2,
-    FORMAT = 'CSV',
-    ROWTERMINATOR='0x0a'
-)
-GO
+COPY "product" FROM '/data/Product.csv' WITH (FORMAT CSV, HEADER);
 
-BULK INSERT [Stock]
-FROM '/data/Stock.csv'
-WITH (
-    FIRSTROW=2,
-    FORMAT = 'CSV',
-    ROWTERMINATOR='0x0a'
-)
-GO
+COPY "stock" FROM '/data/Stock.csv' WITH (FORMAT CSV, HEADER);
 
-BULK INSERT [Order]
-FROM '/data/Order.csv'
-WITH (
-    FIRSTROW=2,
-    FORMAT = 'CSV',
-    ROWTERMINATOR='0x0a'
-)
-GO
+COPY "order" FROM '/data/Order.csv' WITH (FORMAT CSV, HEADER);
 
-BULK INSERT [Sale]
-FROM '/data/Sale.csv'
-WITH (
-    FIRSTROW=2,
-    FORMAT = 'CSV',
-    ROWTERMINATOR='0x0a'
-)
-GO
+COPY "user" FROM '/data/User.csv' WITH (FORMAT CSV, FORCE_NOT_NULL ("gender"), HEADER);
 
-BULK INSERT [User]
-FROM '/data/User.csv'
-WITH (
-    FIRSTROW=2,
-    FORMAT = 'CSV',
-    ROWTERMINATOR='0x0a'
-)
-GO
+COPY "sale" FROM '/data/Sale.csv' WITH (FORMAT CSV, HEADER);
 
-BULK INSERT [Employee]
-FROM '/data/Employee.csv'
-WITH (
-    FIRSTROW=2,
-    FORMAT = 'CSV',
-    ROWTERMINATOR='0x0a'
-)
-GO
+COPY "employee" FROM '/data/Employee.csv' WITH (FORMAT CSV, HEADER);
+

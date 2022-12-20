@@ -163,6 +163,8 @@ The value of an order can be calculated by multiplying the `Amount` of product o
 
     <details><summary>Hint</summary>
 
-    You may find it helpful to use a [temporary table](https://codingsight.com/introduction-to-temporary-tables-in-sql-server/) or [local variable](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/declare-local-variable-transact-sql?).
+    You may find it helpful to use a [temporary table](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-select-into/) or [local variable](https://www.postgresql.org/docs/current/plpgsql-declarations.html).
+    
+    > Note that in order to use variables, you must use them within a function.
 
     </details>
