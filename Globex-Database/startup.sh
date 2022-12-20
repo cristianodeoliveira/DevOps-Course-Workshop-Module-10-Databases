@@ -1,7 +1,5 @@
 docker build . -t module-10
 
-docker stop module-10-container && docker rm module-10-container
-
 docker run -d -p 5432:5432 -e 'POSTGRES_PASSWORD=Password123!' --name module-10-container module-10
 
 # Wait for the database to become available
