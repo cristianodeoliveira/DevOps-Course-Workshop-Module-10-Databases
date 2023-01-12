@@ -5,11 +5,10 @@
 You will need to have the following tools installed:
 
 * [Docker](https://www.docker.com/products/docker-desktop)
-* A tool to let you interact with a PostgreSQL database, such as [pgAdmin](https://www.pgadmin.org/download/).
 
 ### Visual Studio Code Extensions
 
-There are extensions for Visual Studio Code that let you connect to PostgreSQL database. You will need to install [Postgre SQL](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql).
+There are extensions for Visual Studio Code that let you connect to PostgreSQL database. We recommend using [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) with [a PostgreSQL Driver](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg).
 
 ## First time setup
 
@@ -28,8 +27,11 @@ CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS      
 If it isn't, run `docker start module-10-container` to start it. If you stop the container for any reason (e.g. restarting your machine) you'll need to run this command.
 
 Connect to the database with the following details:  
+```
 Server name: `localhost`  
 Port Number: 5432
 Database name: `globex`
 Username: `postgres`  
-Password: `Password123!`  
+Password: `Password123!`
+```
+If you are using SQLTools you can setup a connection by clicking the SQLTools icon on the Activity bar in VSCode and selecting "Add New Connection" and choosing "PostgreSQL".
