@@ -6,7 +6,7 @@ If you're unfamiliar with SQL the questions loosely follow the structure of the 
 
 (We have provided the answers to all of the questions below. This will let you check your working as you go.)
 
-Note: You should have already followed the [set-up instructions](https://github.com/CorndelWithSoftwire/Globex-Database). If not, do that now.
+Note: You should have already followed the [set-up instructions](./Globex-Database/README.md). If not, do that now.
 
 ## Reading Data
 

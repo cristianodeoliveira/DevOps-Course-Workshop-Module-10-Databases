@@ -1,3 +1,4 @@
+#!/bin/bash
 docker build . -t module-10
 
 docker run -d -p 5432:5432 -e 'POSTGRES_PASSWORD=Password123!' --name module-10-container module-10
