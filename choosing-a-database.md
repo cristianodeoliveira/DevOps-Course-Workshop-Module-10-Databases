@@ -2,7 +2,7 @@
 
 ## How to choose
 
-Given the plethora of choices of databases available, picking a database for a new software project can be daunting. There many factors to take into account and there are not always obvious right answers.
+Given the plethora of choices of databases available, picking a database for a new software project can be daunting. There are many factors to take into account and there are not always obvious right answers.
 
 It is possible that multiple databases are used for different parts of the application. For example, we can use a standard relational database to store details about artists, genres, tracks and playlists for a streaming music application, and use a graph database to power a recommendations engine based on relationships between artists, genres and songs.
 
